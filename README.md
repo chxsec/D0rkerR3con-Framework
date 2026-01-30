@@ -147,7 +147,7 @@ You can also extend the database by editing `dorkdb.json`, adding your own title
 
 ## Real Demo of the Tool
 
-https://github.com/user-attachments/assets/9b3f1417-b643-4d14-9c1d-5f2b946d2662
+https://github.com/user-attachments/assets/c01dcdf9-7cdf-4851-ad3b-22d73b7f4520
 
 ---
 
