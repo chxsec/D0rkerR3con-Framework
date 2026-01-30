@@ -99,10 +99,12 @@ The tool executes live Google searches in the default browser and cleanly stores
 
 Files created:
 
+```
 results/example.com/
-├── dorks_used.txt # Dorks run, with titles
-├── raw_results.txt # All discovered links
-└── export_example.com.html # (Optional) Pretty report
+├── dorks_used.txt           # Dorks run, with titles
+├── raw_results.txt          # All discovered links
+└── export_example.com.html  # (Optional) Pretty report
+```
 
 ---
 
@@ -137,10 +139,8 @@ You can also extend the database by editing `dorkdb.json`, adding your own title
 <img width="1911" height="1080" alt="Screenshot 2026-01-30 at 3 25 15 PM" src="https://github.com/user-attachments/assets/7906d654-e0fe-4266-9925-1efc8ee5cbb9" />
 <img width="1911" height="1080" alt="Screenshot 2026-01-30 at 3 25 28 PM" src="https://github.com/user-attachments/assets/c53fc085-7c02-4803-8a88-ec076b3d436b" />
 <img width="1911" height="1080" alt="Screenshot 2026-01-30 at 3 25 32 PM" src="https://github.com/user-attachments/assets/74e6106e-2b34-45fa-9a02-5562c3daa577" />
-<img width="1911" height="1080" alt="Screenshot 2026-01-30 at 3 25 45 PM" src="https://github.com/user-attachments/assets/d9475b05-89fb-49c9-8fa2-bae023ff7c83" />
 <img width="1911" height="1080" alt="Screenshot 2026-01-30 at 3 25 53 PM" src="https://github.com/user-attachments/assets/aef781f8-42ba-4897-b825-774bf921f257" />
 <img width="1911" height="1080" alt="Screenshot 2026-01-30 at 3 26 00 PM" src="https://github.com/user-attachments/assets/229091fe-732c-4c43-8fc2-08e2c7f6f954" />
-<img width="1911" height="1080" alt="Screenshot 2026-01-30 at 3 26 16 PM" src="https://github.com/user-attachments/assets/e4933453-d9bb-4410-9266-ae9c82901208" />
 <img width="1911" height="1080" alt="Screenshot 2026-01-30 at 3 29 41 PM" src="https://github.com/user-attachments/assets/2a5f0dca-b892-41ab-a606-80464c670168" />
 
 ---
