@@ -153,7 +153,7 @@ https://github.com/user-attachments/assets/c01dcdf9-7cdf-4851-ad3b-22d73b7f4520
 
 ## Features
 
-- Clean CLI interface with interactive `gum`-powered menus  
+- Clean CLI interface with interactive `gum` powered menus  
 - Neon banner art and colorful terminal aesthetics  
 - 68+ categorized Google Dorks (Secrets, Admin, Files, Logs, etc.)  
 - Structured local database (`dorkdb.json`)  
@@ -215,6 +215,18 @@ chmod +x D0rkerR3con.sh
 ```
 
 ---
+
+## I love GUM why?
+
+Well a picture is worth a thousand words ain't it?
+
+The tool uses [**GUM**](https://github.com/charmbracelet/gum) for its interactive and vibrant terminal UI, bringing a lively, colorful experience to recon workflows.
+
+<a href="https://stuff.charm.sh/gum/nutritional-information.png" target="_blank"><img src="https://stuff.charm.sh/gum/gum.png" alt="Gum Image" width="450" /></a>
+<img alt="Shell running the ./demo.sh script" width="600" src="https://vhs.charm.sh/vhs-1qY57RrQlXCuydsEgDp68G.gif">
+
+---
+
 
 ## Future Plans: GUI Edition
 
