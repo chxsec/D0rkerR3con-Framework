@@ -2,7 +2,7 @@
 
 # ──────────────── ASCII & Quote ────────────────
 clear
-curl --silent "https://raw.githubusercontent.com/blackhatethicalhacking/Subdomain_Bruteforce_bheh/main/ascii.sh" | lolcat
+curl --silent "https://raw.githubusercontent.com/blackhatethicalhacking/Subdomain_Bruteforce_bheh/main/ascii.sh" | /usr/games/lolcat
 echo ""
 
 quotes=(
@@ -13,26 +13,26 @@ quotes=(
 "To win one hundred victories in one hundred battles is not the acme of skill."
 )
 random_quote=${quotes[$RANDOM % ${#quotes[@]}]}
-echo "Offensive Security Tip: $random_quote – Sun Tzu" | lolcat
+echo "Offensive Security Tip: $random_quote – Sun Tzu" | /usr/games/lolcat
 sleep 1
 
-figlet -w 80 -f small "D0rkerR3con Framework" | lolcat
+figlet -w 80 -f small "D0rkerR3con Framework" | /usr/games/lolcat
 echo ""
-echo "[YOU ARE USING D0rkerR3con.sh] - (v10.0 FINAL)" | lolcat
-echo "CODED BY Chris 'SaintDruG' Abou‑Chabké WITH ❤ FOR blackhatethicalhacking.com" | lolcat
-echo "FOR EDUCATIONAL PURPOSES ONLY!" | lolcat
+echo "[YOU ARE USING D0rkerR3con.sh] - (v10.0 FINAL)" | /usr/games/lolcat
+echo "CODED BY Chris 'SaintDruG' Abou‑Chabké WITH ❤ FOR blackhatethicalhacking.com" | /usr/games/lolcat
+echo "FOR EDUCATIONAL PURPOSES ONLY!" | /usr/games/lolcat
 echo ""
 
 # ──────────────── Internet Check ────────────────
-echo "CHECKING INTERNET CONNECTIVITY..." | lolcat
-wget -q --spider https://google.com || { echo "NO INTERNET — EXITING!" | lolcat; exit 1; }
-echo "INTERNET OK — LET’S GO ⚡" | lolcat
+echo "CHECKING INTERNET CONNECTIVITY..." | /usr/games/lolcat
+wget -q --spider https://google.com || { echo "NO INTERNET — EXITING!" | /usr/games/lolcat; exit 1; }
+echo "INTERNET OK — LET’S GO ⚡" | /usr/games/lolcat
 sleep 1
 
 # ──────────────── Tool Info ────────────────
 echo ""
-echo "🔍 What is this tool?" | lolcat
-echo "D0rkerR3con Framework is an Offensive Recon toolkit to:" | lolcat
+echo "🔍 What is this tool?" | /usr/games/lolcat
+echo "D0rkerR3con Framework is an Offensive Recon toolkit to:" | /usr/games/lolcat
 echo "• Discover exposed files, secrets, panels, backups & misconfigs"
 echo "• Launch weaponized Google Dorks per domain"
 echo "• Save structured Recon output per target"
@@ -92,27 +92,27 @@ pre { background:#111; padding:15px; }
 </html>
 EOF
 
-  echo "[+] Exported HTML & MD reports for $DOMAIN" | lolcat
+  echo "[+] Exported HTML & MD reports for $DOMAIN" | /usr/games/lolcat
 }
 
 # ──────────────── View Previous Results ────────────────
 function view_previous_results {
   local DOMAINS=$(ls "$RESULTS_DIR" 2>/dev/null)
-  [ -z "$DOMAINS" ] && echo "No previous scans found." | lolcat && return
+  [ -z "$DOMAINS" ] && echo "No previous scans found." | /usr/games/lolcat && return
 
-  echo "[*] Select a previous domain:" | lolcat
+  echo "[*] Select a previous domain:" | /usr/games/lolcat
   SELECTED=$(echo "$DOMAINS" | gum choose)
 
   TXT_FILE="$RESULTS_DIR/$SELECTED/dorks_used.txt"
   if [[ -f "$TXT_FILE" ]]; then
     echo ""
-    echo "📂 Results for: $SELECTED" | lolcat
+    echo "📂 Results for: $SELECTED" | /usr/games/lolcat
     echo ""
-    cat "$TXT_FILE" | lolcat
+    cat "$TXT_FILE" | /usr/games/lolcat
     echo ""
     gum confirm "Export this again to HTML / Markdown?" && export_report "$SELECTED"
   else
-    echo "No dork results found for $SELECTED" | lolcat
+    echo "No dork results found for $SELECTED" | /usr/games/lolcat
   fi
 }
 
@@ -129,7 +129,7 @@ function start_new_scan {
   CATEGORIES=$(jq -r '.[] | .category' "$DORK_DB" | sort -u)
   CATEGORIES="ALL"$'\n'"$CATEGORIES"
 
-  echo "[?] Select category/modules to browse:" | lolcat
+  echo "[?] Select category/modules to browse:" | /usr/games/lolcat
   SELECTED_CATEGORY=$(echo "$CATEGORIES" | gum choose)
 
   if [[ "$SELECTED_CATEGORY" == "ALL" ]]; then
@@ -158,8 +158,8 @@ function start_new_scan {
         URL="https://www.google.com/search?q=$(printf "site:%s %s" "$DOMAIN" "$DORK" | jq -sRr @uri)"
       fi
 
-      echo "[*] [$ID] $NAME" | lolcat
-      echo "→ $URL" | lolcat
+      echo "[*] [$ID] $NAME" | /usr/games/lolcat
+      echo "→ $URL" | /usr/games/lolcat
 
       {
         echo "[$ID] $NAME"
@@ -175,7 +175,7 @@ function start_new_scan {
   done
 
   gum confirm "Generate HTML / Markdown report?" && export_report "$DOMAIN_CLEAN"
-  echo "[+] Scan complete for $DOMAIN" | lolcat
+  echo "[+] Scan complete for $DOMAIN" | /usr/games/lolcat
 }
 
 # ──────────────── MAIN MENU ────────────────
@@ -185,6 +185,6 @@ while true; do
   case "$CHOICE" in
     "Start New Scan") start_new_scan ;;
     "View Previous Results") view_previous_results ;;
-    "Exit") echo "Later, ninja 🥷" | lolcat; exit 0 ;;
+    "Exit") echo "Later, ninja 🥷" | /usr/games/lolcat; exit 0 ;;
   esac
 done
