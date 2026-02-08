@@ -2,6 +2,7 @@
 # Colors
 GREEN="\033[1;32m"
 RED="\033[1;31m"
+YELLOW="\033[1;33m"
 NC="\033[0m"
 
 # Check and add /usr/games to PATH if missing
@@ -80,20 +81,28 @@ check_install "jq" "jq"
 check_install "lolcat" "lolcat"
 check_install "figlet" "figlet"
 check_install "wget" "wget"
+check_install "curl" "curl"
 check_install "gum" "gum"
 
 echo -e "\n${GREEN}🎉 All requirements checked and installed!${NC}\n"
 
 # Provide appropriate reload instructions based on detected shell
 CURRENT_SHELL=$(basename "$SHELL")
+echo -e "${YELLOW}════════════════════════════════════════════════════════════${NC}"
+echo -e "${YELLOW}⚠️  IMPORTANT: Before running D0rkerR3con.sh${NC}"
+echo -e "${YELLOW}════════════════════════════════════════════════════════════${NC}"
 if [[ "$CURRENT_SHELL" == "zsh" ]]; then
-    echo -e "${GREEN}⚠️  If this is your first time running this script, please run:${NC}"
-    echo -e "${GREEN}   source ~/.zshrc${NC}"
-    echo -e "${GREEN}   OR restart your terminal for PATH changes to take effect.${NC}\n"
+    echo -e "${GREEN}Run one of these commands to update your PATH:${NC}"
+    echo -e "${GREEN}   1. source ~/.zshrc${NC}"
+    echo -e "${GREEN}   2. exec zsh${NC}"
+    echo -e "${GREEN}   3. Exit and restart your terminal${NC}\n"
 elif [[ "$CURRENT_SHELL" == "bash" ]]; then
-    echo -e "${GREEN}⚠️  If this is your first time running this script, please run:${NC}"
-    echo -e "${GREEN}   source ~/.bashrc${NC}"
-    echo -e "${GREEN}   OR restart your terminal for PATH changes to take effect.${NC}\n"
+    echo -e "${GREEN}Run one of these commands to update your PATH:${NC}"
+    echo -e "${GREEN}   1. source ~/.bashrc${NC}"
+    echo -e "${GREEN}   2. exec bash${NC}"
+    echo -e "${GREEN}   3. Exit and restart your terminal${NC}\n"
 else
-    echo -e "${GREEN}⚠️  Please restart your terminal for PATH changes to take effect.${NC}\n"
+    echo -e "${GREEN}Exit and restart your terminal for PATH changes to take effect.${NC}\n"
 fi
+echo -e "${YELLOW}Then you can run: ./D0rkerR3con.sh${NC}"
+echo -e "${YELLOW}════════════════════════════════════════════════════════════${NC}\n"
